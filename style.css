@@ -106,6 +106,7 @@ canvas#starfield {
   background: linear-gradient(90deg, #555 0%, #fff 50%, #555 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shine 2s linear infinite;
 }
@@ -230,6 +231,7 @@ canvas#starfield {
 .gradient-text {
   background: linear-gradient(135deg, var(--text-color) 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
