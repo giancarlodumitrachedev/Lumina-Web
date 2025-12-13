@@ -96,7 +96,7 @@ canvas#starfield {
 .cursor-dot {
   width: 8px;
   height: 8px;
-  background-color: var(--text-color);
+  background-color: var(--accent-primary);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;

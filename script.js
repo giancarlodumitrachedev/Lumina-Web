@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('mousemove', (e) => {
     // Immediate dot movement (responsive)
     gsap.to(cursorDot, {
-      x: e.clientX,
-      y: e.clientY,
+      x: e.clientX - 4, // Center the 8px dot
+      y: e.clientY - 4,
       duration: 0.1,
       overwrite: true
     });
