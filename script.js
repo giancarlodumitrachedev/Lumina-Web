@@ -27,16 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const cursorGlow = document.querySelector('.cursor-glow');
 
   document.addEventListener('mousemove', (e) => {
+    // Immediate dot movement (responsive)
     gsap.to(cursorDot, {
       x: e.clientX,
       y: e.clientY,
-      duration: 0.1
+      duration: 0.1,
+      overwrite: true
     });
+
+    // Delayed glow movement (trail effect)
     gsap.to(cursorGlow, {
       x: e.clientX - 20, // offset half width
       y: e.clientY - 20,
-      duration: 0.3,
-      ease: "power2.out"
+      duration: 0.8, // Increased from 0.3
+      ease: "power2.out",
+      overwrite: true
     });
   });
 
