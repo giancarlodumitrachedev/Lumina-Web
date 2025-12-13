@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumina Web | Brilla nel digitale</title>
+
+  <meta name="description"
+    content="Lumina Web: We illuminate your digital presence with high-performance code and stunning design.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Syncopate:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="is-loading">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader-content">
+      <div class="shimmer-text">LUMINA</div>
+      <div class="loading-bar">
+        <div class="bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Elements -->
+  <div class="ambient-light"></div>
+  <canvas id="starfield"></canvas>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-glow"></div>
+  <div class="cursor-dot"></div>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="main-header">
+      <a href="#home" class="brand">
+        <span class="brand-icon">✨</span> LUMINA
+      </a>
+      <nav class="nav-desktop">
+        <a href="#services" class="hover-link">Services</a>
+        <a href="#work" class="hover-link">Work</a>
+        <a href="#contact" class="hover-link">Contact</a>
+        <button id="theme-toggle" class="magnetic-btn">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div class="hero-content">
+          <p class="overline reveal-text">Brilla nel digitale</p>
+          <h1 class="headline">
+            <span class="reveal-text">We Craft</span><br>
+            <span class="reveal-text gradient-text">Luminous</span><br>
+            <span class="reveal-text">Experiences.</span>
+          </h1>
+          <p class="sub-headline reveal-text">Transforming brands into beacons of light in the digital void.</p>
+          <div class="cta-wrapper reveal-text">
+            <a href="#work" class="btn-glow magnetic-btn">View Projects</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services / Expertise -->
+      <section id="services" class="services-section">
+        <div class="section-header">
+          <h2 data-scroll>The Spectrum</h2>
+          <div class="line"></div>
+        </div>
+        <div class="services-grid">
+          <div class="service-card glass-panel" data-scroll>
+            <div class="icon">⚛️</div>
+            <h3>Web Development</h3>
+            <p>High-performance React & Next.js applications built for speed and scalability.</p>
+          </div>
+          <div class="service-card glass-panel" data-scroll>
+            <div class="icon">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>Interfaces that glow. We focus on interaction, animation, and user retention.</p>
+          </div>
+          <div class="service-card glass-panel" data-scroll>
+            <div class="icon">🚀</div>
+            <h3>SEO & Growth</h3>
+            <p>Optimization strategies to ensure your brand shines brighter than competitors.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="work" class="work-section">
+        <div class="section-header">
+          <h2 data-scroll>Illuminated Work</h2>
+        </div>
+        <div class="projects-list">
+          <!-- Project 1 -->
+          <div class="project-item" data-scroll>
+            <div class="project-info">
+              <span class="cat">Fintech</span>
+              <h3>Nova Finance</h3>
+              <a href="#" class="view-link">View Case -></a>
+            </div>
+            <div class="project-img">
+              <div class="img-placeholder gradient-1"></div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-item" data-scroll>
+            <div class="project-info">
+              <span class="cat">E-Commerce</span>
+              <h3>Aura Glow</h3>
+              <a href="#" class="view-link">View Case -></a>
+            </div>
+            <div class="project-img">
+              <div class="img-placeholder gradient-2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact-section">
+        <div class="contact-container glass-panel" data-scroll>
+          <h2>Ignite Your Project</h2>
+          <p>Ready to step into the light? Let's build something brilliant together.</p>
+          <a href="mailto:hello@luminaweb.com" class="btn-glow magnetic-btn">hello@luminaweb.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <span>© 2025 Lumina Web.</span>
+        <div class="socials">
+          <a href="#" class="hover-link">Instagram</a>
+          <a href="#" class="hover-link">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- GSAP Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
