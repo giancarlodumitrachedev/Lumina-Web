@@ -1,5 +1,46 @@
 // Wait for DOM
+// Wait for DOM
 document.addEventListener('DOMContentLoaded', () => {
+
+  // --- 0. Initialize Smooth Scroll (Lenis) & Custom Scrollbar ---
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    orientation: 'vertical',
+    gestureOrientation: 'vertical',
+    smoothWheel: true,
+  });
+
+  // Inject Scrollbar UI
+  const scrollContainer = document.createElement('div');
+  scrollContainer.className = 'scroll-progress-container';
+  const scrollBar = document.createElement('div');
+  scrollBar.className = 'scroll-progress-bar';
+  scrollContainer.appendChild(scrollBar);
+  document.body.appendChild(scrollContainer);
+
+  // Sync scrollbar with Lenis
+  lenis.on('scroll', ({ progress }) => {
+    // progress is 0 to 1
+    scrollBar.style.height = `${progress * 100}%`;
+  });
+
+  // Connect Lenis to requestAnimationFrame
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  // Handle Anchor Links with Lenis
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      lenis.scrollTo(targetId);
+    });
+  });
 
   // --- 1. Preloader Animation ---
   const tl = gsap.timeline();

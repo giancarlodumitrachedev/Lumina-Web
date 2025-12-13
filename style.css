@@ -37,6 +37,38 @@ body {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+/* Hide Default Scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Custom Scroll Progress Bar */
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 4px;
+  /* Sleek and thin */
+  height: 100vh;
+  z-index: 10001;
+  /* Above almost everything */
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  width: 100%;
+  height: 0%;
+  /* Start at 0 */
+  background: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-primary);
+  border-radius: 0 0 2px 2px;
+}
+
 /* Ambient Light Background */
 .ambient-light {
   position: fixed;
