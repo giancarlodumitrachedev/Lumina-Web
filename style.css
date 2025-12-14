@@ -485,6 +485,12 @@ a {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .cursor-dot,
+  .cursor-glow {
+    display: none;
+  }
+
   .headline {
     font-size: 13vw;
     /* Responsive font resizing */
