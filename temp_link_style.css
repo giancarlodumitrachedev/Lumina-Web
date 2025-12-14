@@ -1,0 +1,5 @@
+.frame-link {
+  display: block;
+  cursor: none;
+  /* Ensure link cursor doesn't override custom one (though global * does this) */
+}
