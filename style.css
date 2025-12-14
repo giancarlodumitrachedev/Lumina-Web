@@ -29,11 +29,16 @@
   /* Hide default cursor */
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-main);
-  overflow-x: hidden;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -74,7 +79,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background:
     radial-gradient(circle at 15% 50%, rgba(112, 0, 255, 0.15), transparent 25%),
@@ -449,10 +454,40 @@ canvas#starfield {
   opacity: 0.7;
 }
 
+/* Ensure text doesn't overflow globally */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a {
+  overflow-wrap: break-word;
+  /* Standard property */
+  word-wrap: break-word;
+  /* Legacy support */
+  hyphens: auto;
+}
+
+.btn-glow {
+  /* Existing styles remain, but add handling for long strings like emails */
+  white-space: normal;
+  /* Allow wrapping */
+  word-break: break-all;
+  /* Break long email addresses */
+  text-align: center;
+  max-width: 100%;
+  /* Ensure it doesn't exceed container */
+  display: inline-block;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .headline {
-    font-size: 2.8rem;
+    font-size: 13vw;
+    /* Responsive font resizing */
   }
 
   .project-item {
@@ -483,6 +518,15 @@ canvas#starfield {
   .hero-section {
     padding: 0 5%;
     text-align: center;
+  }
+
+  .contact-section {
+    padding: 10vh 5%;
+  }
+
+  .contact-container h2 {
+    font-size: 2.5rem;
+    /* Smaller for mobile */
   }
 
   .hero-content {
